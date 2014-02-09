@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /bonsai-website
+/usr/local/bin/bonsai --plant "$1"
