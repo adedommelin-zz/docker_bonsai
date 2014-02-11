@@ -15,9 +15,7 @@ ENV LC_LANGUAGE en_US.UTF-8
 
 # Download ruby 1.9.3 stuff + install gems
 RUN apt-get install -y ruby1.9.3 make
-RUN /usr/bin/gem1.9.3 install bonsai
-
-RUN mkdir /bonsai-website
+RUN /usr/bin/gem1.9.3 install --no-rdoc --no-ri bonsai
 
 # Fix issue with browser loading (thanks @jpetazzo for this one!)
 RUN ln -s /bin/true /usr/bin/firefox
