@@ -15,6 +15,7 @@ ENV LC_LANGUAGE en_US.UTF-8
 
 # Download ruby 1.9.3 stuff + install gems
 RUN apt-get install -y ruby1.9.3 make
+RUN apt-get install -y openjdk-6-jre
 RUN /usr/bin/gem1.9.3 install --no-rdoc --no-ri bonsai
 
 # Fix issue with browser loading (thanks @jpetazzo for this one!)
